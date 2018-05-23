@@ -1,0 +1,8 @@
+@import play.api.libs.json.JsValue
+@(students: JsValue)(implicit messagesProvider: MessagesProvider)
+
+@main("Welcome to Play") {
+  @*<h1>Welcome to Play!</h1>*@
+
+  @students
+}
