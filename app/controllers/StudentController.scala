@@ -2,6 +2,7 @@ package controllers
 
 import javax.inject._
 import models.Student._
+import models.Subject._
 import play.api._
 import play.api.i18n.I18nSupport
 import play.api.libs.json.Json
@@ -21,7 +22,11 @@ class StudentController @Inject()(cc: ControllerComponents) extends AbstractCont
    * will be called when the application receives a `GET` request with
    * a path of `/`.
    */
-  def index() = Action { implicit request: Request[AnyContent] =>
+  def studentsIndex() = Action { implicit request: Request[AnyContent] =>
     Ok(Json.toJson(students))
+  }
+
+  def subjectsIndex() = Action { implicit request: Request[AnyContent] =>
+    Ok(Json.toJson(subjects))
   }
 }

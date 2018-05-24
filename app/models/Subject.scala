@@ -18,4 +18,6 @@ object Subject {
 
   val maths = Subject("Maths", "Introduction to Algebra & Arithmetics", 3)
 
+  val subjects = List(computerScience, history, geography, maths)
+
 }
