@@ -1,22 +1,40 @@
 var React = require("react");
 var StudentDetails = require("StudentDetails");
-var details = require("studentApi")
+var Layout = require("PageLayout")
+const STUDENT_URL = 'http://localhost:9000/students';
+var axios = require("axios")
 
+class Students extends React.Component {
 
-var Students = () => {
-    details.getDetails().then(function (data) {
-        console.log("here", data.data.map(
-            x => [document.getElementById("data").innerText = x.name]
-        ))
-    })
-    return (
-        <div>
-            <StudentDetails/>
-            <h1>Students page</h1>
-        </div>
+    constructor(props) {
+        super(props)
+        this.state = {students: []}
 
-    )
-};
+        this.getStudentDetails().then(data => {
+            this.setState({students: data})
+        })
+    }
+
+    getStudentDetails() {
+        return axios.get(STUDENT_URL).then(function (res) {
+            return res.data
+        }, function (res) {
+            throw new Error(res);
+        });
+    }
+
+    render() {
+        return (
+            <Layout>
+                <div>
+                    {console.log(this.state.students)}
+                    <h1> Students </h1>
+                    <StudentDetails students={this.state.students}/>
+                </div>
+            </Layout>
+        )
+    }
+}
 
 
 module.exports = Students;

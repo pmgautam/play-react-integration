@@ -14,7 +14,12 @@ module.exports = {
             Subjects: path.resolve(__dirname, "components/Subjects.jsx"),
             Main: path.resolve(__dirname, "components/Main.jsx"),
             StudentDetails: path.resolve(__dirname, "components/StudentDetails.jsx"),
-            studentApi: path.resolve(__dirname, "data/studentDetails.jsx")
+            StudentList: path.resolve(__dirname, "components/StudentList.jsx"),
+            SubjectDetails: path.resolve(__dirname, "components/SubjectDetails.jsx"),
+            SubjectList: path.resolve(__dirname, "components/SubjectList.jsx"),
+            studentApi: path.resolve(__dirname, "data/getDetails.jsx"),
+            PageLayout: path.resolve(__dirname, "components/PageLayout.jsx"),
+            MainMenu: path.resolve(__dirname, "components/MainMenu.jsx")
         }
     },
     module: {

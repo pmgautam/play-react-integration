@@ -1,14 +1,21 @@
 var React = require("react");
+var StudentList = require("StudentList")
 
-var StudentDetails = (props) => {
-    fetch("http://localhost:9000").then(function (data) {
-        console.log("data", {data})
-        document.getElementById("data").innerHTML = data.headers
-    }).catch(function (error) {
-        console.log("error", error)
-    })
+var StudentDetails = ({students}) => {
 
-    return (<h4>Students</h4>)
+    console.log("students", students)
+
+    const studentDetails = students.map(
+        (x, i) => {
+            return (<StudentList student={x} key={i}/>)
+        }
+    )
+
+    return (
+        <ul>
+            {studentDetails}
+        </ul>
+    )
 }
 
 
