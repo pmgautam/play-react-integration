@@ -16,16 +16,15 @@ import play.api.mvc._
 class StudentController @Inject()(cc: ControllerComponents) extends AbstractController(cc) with I18nSupport{
 
   /**
-   * Create an Action to render an HTML page.
-   *
-   * The configuration in the `routes` file means that this method
-   * will be called when the application receives a `GET` request with
-   * a path of `/`.
-   */
+    * returns JSON of students
+    */
   def studentsIndex() = Action { implicit request: Request[AnyContent] =>
     Ok(Json.toJson(students))
   }
 
+  /**
+    * returns JSON of subjects
+    */
   def subjectsIndex() = Action { implicit request: Request[AnyContent] =>
     Ok(Json.toJson(subjects))
   }
