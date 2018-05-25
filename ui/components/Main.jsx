@@ -1,17 +1,19 @@
-var React = require('react');
-var {Link} = require('react-router-dom')
-var Layout = require("PageLayout")
+const React = require('react');
+const {Link} = require('react-router-dom')
+const Layout = require("PageLayout")
 
-var Main = () => {
+/**
+ * This is the front page. It doesn't contain any functionality. Only serves as a welcome page
+ */
+const Main = () => {
     return(
         <nav>
             <Layout>
                 welcome to Main page. Select any options
-            {/*<Link to = "Students">Students</Link>
-            <Link to = "Subjects">Subjects</Link>*/}
             </Layout>
         </nav>
     )
 }
 
 module.exports = Main;
+

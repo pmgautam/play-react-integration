@@ -1,5 +1,5 @@
-var React = require("react")
-var Navigation = require("MainMenu")
+const React = require("react")
+const Navigation = require("MainMenu")
 
 const PageLayout = (props) => {
     return (
@@ -11,3 +11,4 @@ const PageLayout = (props) => {
 }
 
 module.exports = PageLayout
+

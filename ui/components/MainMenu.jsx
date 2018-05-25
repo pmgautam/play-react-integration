@@ -1,13 +1,13 @@
-var React = require("react");
-var {NavLink} = require("react-router-dom");
+const React = require("react");
+const {NavLink} = require("react-router-dom");
 
 const selected = {
-    // backgroundColor: white,
-    // fontWeight: bold
+    color: "blue",
+    fontWeight: "bold"
 };
 
 
-var MainMenu = () => {
+const MainMenu = () => {
     return (<nav className="mainMenu">
             <NavLink to="/"> Home </NavLink>
             <NavLink to="/students" activeStyle={selected}> Students </NavLink>

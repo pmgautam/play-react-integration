@@ -1,12 +1,15 @@
 console.log("This is a test")
 
-var React = require('react');
-var ReactDOM = require('react-dom');
-var {HashRouter, Route} = require("react-router-dom")
-var Students = require('Students');
-var Subjects = require('Subjects');
-var Main = require('Main');
+const React = require('react');
+const ReactDOM = require('react-dom');
+const {HashRouter, Route} = require("react-router-dom")
+const Students = require('Students');
+const Subjects = require('Subjects');
+const Main = require('Main');
 
+/**
+ * Starting page that shows routes to pages of students and subjects
+ */
 
 ReactDOM.render(
     <HashRouter>
@@ -14,7 +17,6 @@ ReactDOM.render(
             <Route exact path="/" component={Main}/>
             <Route path="/students" component={Students}/>
             <Route path="/subjects" component={Subjects}/>
-            {/*<Route Component="/" component={Main}/>*/}
         </div>
     </HashRouter>,
     document.getElementById('test-area')

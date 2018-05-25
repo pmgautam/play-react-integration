@@ -1,8 +1,8 @@
-var React = require("react");
-var StudentDetails = require("StudentDetails");
-var Layout = require("PageLayout")
+const React = require("react");
+const StudentDetails = require("StudentDetails");
+const Layout = require("PageLayout")
 const STUDENT_URL = 'http://localhost:9000/students';
-var axios = require("axios")
+const axios = require("axios")
 
 class Students extends React.Component {
 

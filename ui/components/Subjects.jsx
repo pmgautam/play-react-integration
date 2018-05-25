@@ -1,8 +1,8 @@
-var React = require("react");
-var SubjectDetails = require("SubjectDetails");
-var Layout = require("PageLayout")
+const React = require("react");
+const SubjectDetails = require("SubjectDetails");
+const Layout = require("PageLayout")
 const SUBJECT_URL = 'http://localhost:9000/subjects';
-var axios = require("axios")
+const axios = require("axios")
 
 class Subjects extends React.Component {
 

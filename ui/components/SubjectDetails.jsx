@@ -1,7 +1,7 @@
-var React = require("react");
-var SubjectList = require("SubjectList")
+const React = require("react");
+const SubjectList = require("SubjectList")
 
-var SubjectDetails = ({subject}) => {
+const SubjectDetails = ({subject}) => {
 
     console.log("subject", subject)
 

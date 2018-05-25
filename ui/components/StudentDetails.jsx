@@ -1,7 +1,7 @@
-var React = require("react");
-var StudentList = require("StudentList")
+const React = require("react");
+const StudentList = require("StudentList")
 
-var StudentDetails = ({students}) => {
+const StudentDetails = ({students}) => {
 
     console.log("students", students)
 
